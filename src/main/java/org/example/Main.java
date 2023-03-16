@@ -4,13 +4,39 @@ public class Main {
     public static void main(String[] args)
 
     {
-        String thanks = "Thank you,";
-        String name = "miguel!";
-        String order = "Your order number is #";
-        int previousOrder = 715;
-        previousOrder++;
+       int dayOfWeek = 3;
+       String newDayOfTheWeek ;
 
-        System.out.println(thanks + " " + name.toUpperCase() + "\n" + order + previousOrder);
+       switch(dayOfWeek) {
+           case 1:
+               newDayOfTheWeek = "Monday";
+               break;
+           case 2:
+               newDayOfTheWeek = "Tuesday";
+               break;
+           case 3:
+               newDayOfTheWeek = "Wednesday";
+               break;
+           case 4:
+               newDayOfTheWeek = "Thursday";
+               break;
+           case 5:
+               newDayOfTheWeek = "Friday";
+               break;
+           case 6:
+               newDayOfTheWeek = "Saturday";
+               break;
+           case 7:
+               newDayOfTheWeek = "Sunday";
+               break;
+           default:
+               newDayOfTheWeek = "Not a day of the week";
+               break;
+
+
+
+       }
+
 
     }
 
