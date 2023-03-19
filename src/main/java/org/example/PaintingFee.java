@@ -8,28 +8,35 @@ public class PaintingFee {
     public static void main(String[] args) {
 
 
-        double height = 50.00;
-        double width = 30.00;
+        double length = 5.00;
+        double width = 3.00;
+        double floor = 5.00;
+        double roof = 5.00;
+        double window = 2.0;
+
         int paintCan = 0;
         double pricePerCan = 25.00;
         Scanner userInputScanner = new Scanner (System.in);
 
-        double wallArea = height * width;
+        double wallArea = length * width;
 
-        if(wallArea <= 500.00) {
-            paintCan++;
-            System.out.println("It will require " + paintCan + "/s");
-        } else if (wallArea <= 1000.00) {
-            paintCan+=2;
-            System.out.println("It will require " + paintCan + "/s");
-        }  else if (wallArea <= 1500.00) {
-            paintCan+=3;
-            System.out.println("It will require " + paintCan + "/s");
-        }
+            if (wallArea <= 50.00) {
+                paintCan++;
+                System.out.println("It will require " + paintCan + "/s");
+            } else if (wallArea <= 100.00) {
+                paintCan += 2;
+                System.out.println("It will require " + paintCan + "/s");
+            } else if (wallArea <= 150.00) {
+                paintCan += 3;
+                System.out.println("It will require " + paintCan + "/s");
+            }
 
         else  if (wallArea == 0) {
             System.out.println("No Paint is required");
+        } else {
+            System.out.println("");
         }
+
 
         int typeOfPaint = 3;
         double pricePaintType = 0;
@@ -65,7 +72,8 @@ public class PaintingFee {
         //for(String s : colours) {
           //  System.out.println("Here are all the colour options to choose from: " + colours(s));
        // }
-        System.out.println("The colours that are available: ");
+        System.out.println("The colour paints that are available: ");
+
         for (String s: colours) {
 
             System.out.println(s);
@@ -74,18 +82,12 @@ public class PaintingFee {
             System.out.println("Which colour paint would you like?" + "");
             String paintColour = userInputScanner.nextLine();
             colours.add(paintColour);
-            System.out.println("You chose the colour: " + paintColour);
+            System.out.println("You chose the colour:" + paintColour);
 
 
-
-
-
-
-
-
-        System.out.println("The wall area to paint is: " + wallArea +
-                " square feet " + "\n" + "Price to paint entire wall: "
-                + "£" + totalCost + "\n" + "You have chosen " + paintName
+            System.out.println("The wall area to paint is: " + wallArea +
+            " square feet " + "\n" + "Price to paint entire wall: "
+            + "£" + totalCost + "\n" + "You have chosen " + paintName
 
         );
 
@@ -93,5 +95,7 @@ public class PaintingFee {
         // System.out.println("Paint required:" + paintNeeded + "gallons");
 
     }
+
+
 
 }
